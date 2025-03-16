@@ -24,6 +24,10 @@ The project has a modular structure and is divided into logical layers. Each lay
 
 5. Lastly, the **ui** layer is responsible for handling input from the user. It includes a helper class to validate user input and inform the user if the input needs to be corrected. The final output presented to the user is handled in Deepnote notebooks - see section [Working with Notebooks](#working-with-notebooks) for more details.
 
+# Class Diagram
+
+![](/images/Class_Diagram.png)
+
 
 # How to Start
 1. Create a new (empty) repository on GitHub
