@@ -49,15 +49,15 @@ Notebooks are a way to showcase your user stories. You may create multiple noteb
 - Click on the 3 dots next to the notebook and set the working directory to the folder corresponding to your GitHub repository. For e.g., if your repository is called Hotel_Reservation, set the working directory to ```/Hotel_Reservation```. You will be prompted to restart the machine after changing the working directory. Ensure that you have created a GitHub integration before this step.
 - Add notebooks to GitHub on a regular basis - refer to the section [Commit to GitHub](#commit-to-github).
 
-*Alternatively, you may work with an IDE like PyCharm. This requires a slightly different setup than working with Notebooks. Please contact your coach if you prefer this approach. However, in this module, notebooks is the recommended way to showcase your user stories*. 
+*Alternatively, you may work with an IDE like PyCharm. This requires a slightly different setup than working with Notebooks. Please contact your coach if you prefer this approach. However, in this module, notebooks are the recommended way to showcase your user stories*. 
 
 Refer to MediaShop and DateExample notebooks in the reference project. View the reference project in [Deepnote](https://deepnote.com/workspace/charutapande-cdd21ef1-81ef-478b-bad4-3126daa688f2/project/AEP-Reference-Project-4e94a061-aa40-40c5-852c-78ff3f280c82/notebook/Notebook-1-fd5bf4d4c1cb447797824210a20c4d24?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=4e94a061-aa40-40c5-852c-78ff3f280c82).
 
 
 # Documentation
-Describe the overall documentation for your project in the GitHub ReadMe.md file. This may include the contributors, their roles, your methodology/project management and overall reflection. Include links to the Deepnote project, Project Board etc. directly in the ReadMe.md file.
+Describe the overall documentation for your project in the GitHub README.md file. This may include the contributors, their roles, your methodology/project management and overall reflection. Include links to the Deepnote project, Project Board etc. directly in the README.md file.
 
-Include any documentation specific to the user stories like instructions to run the notebook, explanation of output etc. directly in the notebook. You need not duplicate this information in the GitHub ReadMe.md file.
+Include any documentation specific to the user stories like instructions to run the notebook, explanation of output etc. directly in the notebook. You need not duplicate this information in the GitHub README.md file.
 
 ## Commit to GitHub
 Define milestones in your project to commit your changes to GitHub on a regular basis. Do ensure that your code including the notebooks is error-free! Refer to the videos on Moodle to understand how to work with GitHub from Deepnote.
