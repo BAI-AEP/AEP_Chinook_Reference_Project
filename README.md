@@ -47,7 +47,7 @@ Notebooks are a way to showcase your user stories. You may create multiple noteb
 
 *Alternatively, you may work with an IDE like PyCharm. This requires a slightly different setup than working with Notebooks. Please contact your coach if you prefer this approach. However, in this module, notebooks is the recommended way to showcase your user stories*. 
 
-Refer to MediaShop and DateExample notebooks in the reference project. View the reference project in Deepnote().
+Refer to MediaShop and DateExample notebooks in the reference project. View the reference project in [Deepnote](https://deepnote.com/workspace/charutapande-cdd21ef1-81ef-478b-bad4-3126daa688f2/project/AEP-Reference-Project-4e94a061-aa40-40c5-852c-78ff3f280c82/notebook/Notebook-1-fd5bf4d4c1cb447797824210a20c4d24?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=4e94a061-aa40-40c5-852c-78ff3f280c82).
 
 
 # Documentation
