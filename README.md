@@ -7,9 +7,9 @@ Developer - Phillip Gachnang
 <br>Coaches - Christian Schmid, Faruk Doganci, Kyrylo Buga, Phillip Gachnang, Sandro Schwander, Charuta Pande
 
 # Project Structure
-The project has a modular structure is divided into logical layers. Each layer performs a single responsibility. The project uses Object-oriented concepts and Python's import system for communication between layers. Let's understand the layers from right to left:
+The project has a modular structure and is divided into logical layers. Each layer performs a single responsibility. The project uses Object-oriented concepts and Python's import system for communication between layers. Let's understand the layers:
 
-[![](/images/Project_Structure.png)]
+![](/images/Project_Structure.png)
 
 1. The **database** layer has the actual database (sqlite file(s) that represent(s) the data storage).
 
