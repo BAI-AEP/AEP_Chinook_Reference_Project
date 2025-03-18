@@ -14,13 +14,13 @@ The project has a modular structure and is divided into logical layers. Each lay
 1. The **database** layer has the actual database (sqlite file(s) that represent(s) the data storage).
 
 2. The **model** layer is responsible for transporting data between other layers as data objects. Every class in this layer corresponds to an entity in the database and defines functions to get and set properties that correspond to the attributes of that entity. The classes in this layer follow the naming convention ```<entity_name>.py```, where entity_name corresponds to the names of the entities in the database.
-<br>*Note that every new class added to this layer should be included in the ```__init.py__``` file so that it can be imported from other layers.* 
+<br>*Note that every new class added to this layer should be included in the ```__init__.py``` file so that it can be imported from other layers.* 
 
 3. The **data_access** layer is responsible for interacting with the database, i.e., performing CRUD operations. All SQL queries/DML statements are written in this layer. The classes in this layer follow the naming convention ```<entity_name>_dal.py```, where entity_name corresponds to the database entity on which CRUD operations will be performed.
-<br>*Note that every new class added to this layer should be included in the ```__init.py__``` file so that it can be imported from other layers.*
+<br>*Note that every new class added to this layer should be included in the ```__init__.py``` file so that it can be imported from other layers.*
 
 4. The **business_logic** layer is responsible for applying any business logic. The classes in this layer follow the naming convention ```<entity_name>_manager.py```, where entity_name corresponds to the entity on which business logic will be applied before either a. saving information in the database or b. presenting the information to the user.
-<br>*Note that every new class added to this layer should be included in the ```__init.py__``` file so that it can be imported from other layers.*
+<br>*Note that every new class added to this layer should be included in the ```__init__.py``` file so that it can be imported from other layers.*
 
 5. Lastly, the **ui** layer is responsible for handling input from the user. It includes a helper class to validate user input and inform the user if the input needs to be corrected. The final output presented to the user is handled in Deepnote notebooks - see section [Working with Notebooks](#working-with-notebooks) for more details.
 
