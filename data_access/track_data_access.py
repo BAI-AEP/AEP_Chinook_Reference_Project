@@ -2,7 +2,7 @@ import model
 import data_access
 
 
-class TrackDAL(data_access.BaseDal):
+class TrackDataAccess(data_access.BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 

@@ -4,7 +4,7 @@ from contextlib import closing
 import sqlite3
 
 
-class BaseDal:
+class BaseDataAccess:
     def __init__(self, db_connection_str: str = None):
         if db_connection_str is None:
             self.__db_connection_str = os.environ.get("DB_FILE")
@@ -13,11 +13,11 @@ class BaseDal:
         else:
             self.__db_connection_str = db_connection_str
 
-    def get_connection(self):
+    def _connect(self):
         return sqlite3.connect(self.__db_connection_str, detect_types=sqlite3.PARSE_DECLTYPES)
 
     def fetchone(self, sql: str, params: tuple | None = ()):
-        with closing(self.get_connection()) as conn:
+        with closing(self._connect()) as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)
@@ -30,7 +30,7 @@ class BaseDal:
         return result
 
     def fetchall(self, sql: str, params: tuple | None = ()) -> list:
-        with closing(self.get_connection()) as conn:
+        with closing(self._connect()) as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)
@@ -43,7 +43,7 @@ class BaseDal:
         return result
 
     def execute(self, sql: str, params: tuple | None = ()) -> (int, int):
-        with closing(self.get_connection()) as conn:
+        with closing(self._connect()) as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)

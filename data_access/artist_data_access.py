@@ -6,7 +6,7 @@ import model
 import data_access
 
 
-class ArtistDAL(data_access.BaseDal):
+class ArtistDataAccess(data_access.BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 
@@ -48,7 +48,7 @@ class ArtistDAL(data_access.BaseDal):
         sql = """
         SELECT ArtistId, Name FROM Artist
         """
-        return pd.read_sql(sql, self.get_connection(), index_col='ArtistId')
+        return pd.read_sql(sql, self._connect(), index_col='ArtistId')
 
     def read_artists_like_name(self, name: str) -> list[model.Artist]:
         sql = """
@@ -63,7 +63,7 @@ class ArtistDAL(data_access.BaseDal):
                 SELECT ArtistId, Name FROM Artist WHERE Name LIKE ?
                 """
         params = tuple([f"%{name}%"])
-        return pd.read_sql(sql, self.get_connection(), params=params, index_col='ArtistId')
+        return pd.read_sql(sql, self._connect(), params=params, index_col='ArtistId')
 
     def update_artist(self, artist: model.Artist) -> None:
         if artist is None:

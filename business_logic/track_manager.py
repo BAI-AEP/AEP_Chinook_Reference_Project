@@ -4,7 +4,7 @@ import data_access
 
 class TrackManager:
     def __init__(self):
-        self.__track_dal = data_access.TrackDAL()
+        self.__track_da = data_access.TrackDataAccess()
 
     def create_track(self,
                      name: str,
@@ -16,7 +16,7 @@ class TrackManager:
                      composer: str = None,
                      track_bytes: int = None
                      ) -> model.Track:
-        return self.__track_dal.create_new_track(
+        return self.__track_da.create_new_track(
             name=name,
             album=album,
             media_type=media_type,
@@ -28,7 +28,7 @@ class TrackManager:
         )
 
     def read_track(self, track_id: int) -> model.Track:
-        return self.__track_dal.read_track_by_id(track_id)
+        return self.__track_da.read_track_by_id(track_id)
 
     def read_tracks_by_album(self, album: model.Album) -> list[model.Track]:
-        return self.__track_dal.read_tracks_by_album(album)
+        return self.__track_da.read_tracks_by_album(album)

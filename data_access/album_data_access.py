@@ -4,7 +4,7 @@ import model
 from data_access.base_dal import BaseDal
 
 
-class AlbumDAL(BaseDal):
+class AlbumDataAccess(BaseDal):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 
