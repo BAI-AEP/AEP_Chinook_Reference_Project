@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import model
-from data_access.base_dal import BaseDal
+from data_access.base_data_access import BaseDataAccess
 
 
-class AlbumDataAccess(BaseDal):
+class AlbumDataAccess(BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 

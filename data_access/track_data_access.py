@@ -1,8 +1,8 @@
 import model
-import data_access
+from data_access.base_data_access import BaseDataAccess
 
 
-class TrackDataAccess(data_access.BaseDataAccess):
+class TrackDataAccess(BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 

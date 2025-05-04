@@ -1,9 +1,9 @@
 import model
-from data_access.base_dal import BaseDal
+from data_access.base_data_access import BaseDataAccess
 from model import Genre, genre
 
 
-class GenreDataAccess(BaseDal):
+class GenreDataAccess(BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 

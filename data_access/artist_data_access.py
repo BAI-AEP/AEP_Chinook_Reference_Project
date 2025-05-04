@@ -3,10 +3,10 @@ from unittest import result
 import pandas as pd
 
 import model
-import data_access
+from data_access.base_data_access import BaseDataAccess
 
 
-class ArtistDataAccess(data_access.BaseDataAccess):
+class ArtistDataAccess(BaseDataAccess):
     def __init__(self, db_path: str = None):
         super().__init__(db_path)
 
