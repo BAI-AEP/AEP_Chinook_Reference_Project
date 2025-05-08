@@ -1,5 +1,4 @@
 import os
-from contextlib import closing
 
 import sqlite3
 
@@ -17,7 +16,7 @@ class BaseDataAccess:
         return sqlite3.connect(self.__db_connection_str, detect_types=sqlite3.PARSE_DECLTYPES)
 
     def fetchone(self, sql: str, params: tuple | None = ()):
-        with closing(self._connect()) as conn:
+        with self._connect() as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)
@@ -30,7 +29,7 @@ class BaseDataAccess:
         return result
 
     def fetchall(self, sql: str, params: tuple | None = ()) -> list:
-        with closing(self._connect()) as conn:
+        with self._connect() as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)
@@ -43,7 +42,7 @@ class BaseDataAccess:
         return result
 
     def execute(self, sql: str, params: tuple | None = ()) -> (int, int):
-        with closing(self._connect()) as conn:
+        with self._connect() as conn:
             try:
                 cur = conn.cursor()
                 cur.execute(sql, params)
